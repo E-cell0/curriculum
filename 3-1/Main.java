@@ -10,7 +10,7 @@ public class Main{
         * int型の配列dataを作成し、値を3,1,2,7,5で初期化しなさい
         */
 
-    int[] data=[3, 1, 2, 7, 5]
+    int[] data = {3, 1, 2, 7, 5};
 
         /*
         * 問2
