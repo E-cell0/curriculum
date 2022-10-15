@@ -30,7 +30,7 @@ public class Main{
                 */
                 if(data[i] > data[j]){
                   int box = data[j];
-                  data[i] = data[box + 1];
+                  data[i] = data[i];
                   data[i] = box;
                 }
             }
