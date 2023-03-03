@@ -63,7 +63,8 @@ public class Main {
                     // ルール: ここへ作成したメソッドを呼び出す
                     	
                     	
-                    	a = null;
+                    	String a = null;
+                        System.out.println(a.length());
                     	
                     	
                     break;
@@ -72,7 +73,7 @@ public class Main {
                     // Tips: ご自身で配列を準備してください（使用する配列の型、要素数は自由）
                     // ここへ記述
                     	
-                    	int[] arrayNumbers = {1, 2, 3, 5, 6, 7, 8, 9};
+                    	int[] arrayNumbers = {1, 2, 3};
                     	
                     	System.out.println(arrayNumbers[10]);
                     	
@@ -93,18 +94,20 @@ public class Main {
                 printException(e);
                 // 問③: クラスキャストの例外をキャッチしなさい。
                 // ルール: 上述の他の例外同様引、数名は「e」で記述すること。
-            } /* ここへ記述 */ {
+            } catch (ClassCastException	 e) {
                 printException(e);
             } finally {
                 System.out.println("リトライ回数 = " + retryCounter++);
             }
-        } while (true);
-
+        } while (true);         
+                
+                
         // 終了処理
         sc.close();
         System.out.println("お疲れ様でした！");
     }
-
+    
+    
     /**
      * 問①: 以下のルールに沿ってNullPointerExceptionを投げるメソッドを実装しなさい。
      * ルール1: private static void 任意のメソッド名 throws 上位へ投げるExceptionクラス名 { NullPointerExceptionを発生させる処理 }
@@ -112,19 +115,7 @@ public class Main {
      */
     // ここへ記述
     
-    
-    try {
-		if (!a.equals(1)); {
-    	throw new Exception(CONST_COMMON_MSG_ERROR_EXCEPTION);
-    }
-    //AAA
-    } catch (Exception e) {
-    	System.out.println(CONST_MSG_NULLPO);
-    	System.out.println(e);
-    }
-    
-    
-    
+    private static void aaa throws
 
     /**
      * 例外処理のメッセージを出力
@@ -135,3 +126,5 @@ public class Main {
         System.out.println(e);
     }
 }
+
+    
