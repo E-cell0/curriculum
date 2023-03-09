@@ -65,6 +65,9 @@ public class Main {
                     	
                     	String a = null;
                         System.out.println(a.length());
+                        aaa();
+                        System.out.println(CONST_MSG_NULLPO);
+
                     	
                     	
                     break;
@@ -105,17 +108,23 @@ public class Main {
         // 終了処理
         sc.close();
         System.out.println("お疲れ様でした！");
+        
     }
-    
-    
+
     /**
      * 問①: 以下のルールに沿ってNullPointerExceptionを投げるメソッドを実装しなさい。
-     * ルール1: private static void 任意のメソッド名 throws 上位へ投げるExceptionクラス名 { NullPointerExceptionを発生させる処理 }
+     * ルール1: private static void 任意のメソッド名 throws 上位へ投げるFクラス名 { NullPointerExceptionを発生させる処理 }
      * ルール2: 例外発生時に設定するメッセージは、定義済みの定数から適当なものを指定してください。
      */
     // ここへ記述
-    
-    private static void aaa throws
+    private static void aaa() throws NullPointerException{
+    	
+    	
+    	
+    	throw new NullPointerException();
+    	
+    	
+    }
 
     /**
      * 例外処理のメッセージを出力
@@ -126,5 +135,5 @@ public class Main {
         System.out.println(e);
     }
 }
-
+        
     
