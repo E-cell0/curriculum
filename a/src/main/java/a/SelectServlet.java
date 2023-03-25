@@ -13,6 +13,13 @@ import jakarta.servlet.http.HttpServletResponse;
  * 
  * 
  *
+ *
+ *import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
  */
 public class SelectServlet extends HttpServlet {
 	
@@ -23,7 +30,7 @@ public class SelectServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         
         // 問① select.htmlから渡された値を受け取るために下記を修正しましょう。
-        String value = request.getParameter("month");
+        String value = request.getParameter("select");
         
         response.setContentType("text/html; charset=UTF-8");
         
