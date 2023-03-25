@@ -18,7 +18,7 @@
  <servlet-mapping>
  <servlet-name>select</servlet-name>
  <!--問② URLパターンを記述してください。-->
- <url-pattern>SelectServlet</url-pattern>
+ <url-pattern>month</url-pattern>
  </servlet-mapping>
  
  </web-app>
