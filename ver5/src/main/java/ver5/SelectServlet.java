@@ -1,5 +1,5 @@
 
-package a;
+package ver5;
 
 import java.io.IOException;
 import java.io.PrintWriter;
