@@ -20,7 +20,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>select</servlet-name>
-    <servlet-class>ver5/SelectServlet</servlet-class>
+    <servlet-class>ver5.SelectServlet</servlet-class>
   </servlet>
   
   
