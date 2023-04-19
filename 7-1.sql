@@ -24,7 +24,8 @@ SELECT AVG(price) FROM goods_table
  
 -- 5. 店舗コード='EA01'の在庫数の平均値より大きい在庫数を持つ店舗コードを抽出しなさい。
 -- [回答]
-
+SELECT store_code FROM stock_table
+ WHERE quantity > (SELECT AVG(quantity) FROM stock_table WHERE store_code= 'EA01')
  
 -- 6. 商品テーブルに「商品コード='M001'、商品名='マフラー'、単価=4500円、更新日付=本日日付」のデータを追加しなさい。※実行後のSELECT結果も貼付すること。
 -- [回答]
@@ -44,4 +45,5 @@ goods_code = 'S987' AND store_code = 'EA01'
  
 -- 8. 7で更新した商品を削除しなさい。※実行後のSELECT結果も貼付すること。
 -- [回答]
+
 DELETE FROM stock_table WHERE goods_code = 'S987' AND store_code = 'EA01'
