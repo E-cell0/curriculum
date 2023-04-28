@@ -2,7 +2,7 @@
  
 -- 1. 店舗テーブルから店舗名を抽出しなさい。また、列名の表示は別名で'店舗名'とすること。
 -- [回答]
-SELECT store_name FROM store_table
+SELECT store_name AS 店舗名 FROM store_table
  
  
 -- 2. 店舗情報を店舗名のABC順に抽出しなさい。
@@ -13,8 +13,7 @@ SELECT * FROM store_table ORDER BY store_nameAbc ASC
 -- 3. 在庫テーブルに店舗テーブル、商品テーブルを「内部結合」し、店舗名・商品名・在庫数を全て取得しなさい。
 -- [回答]
 SELECT * FROM stock_table 
-JOIN store_table ON stock_table.store_code = store_table.store_code
-JOIN goods_table ON stock_table.goods_code = goods_table.goods_code
+JOIN store_table ON stock_table.store_code = store_table.store_code INNER JOIN goods_table ON stock_table.goods_code = goods_table.goods_code
 
  
 -- 4. 商品テーブルから全商品の単価の平均値を抽出しなさい。
@@ -32,14 +31,14 @@ SELECT store_code FROM stock_table
 INSERT INTO goods_table
 (goods_code, goods_name, price, update_day)
 VALUES
-('M001', 'マフラー', 4500, '2023-04-15') 
+('M001', 'マフラー', 4500, CURRENT_TIMESTAMP) 
  
 -- 7. 在庫テーブルの商品コード='S987'、かつ、店舗コード='EA01'に対して、「在庫数=10、更新日付=本日日付」で更新しなさい。※実行後のSELECT結果も貼付すること。
 -- [回答]
 UPDATE stock_table
 SET
 quantity = 10,
-update_day = '2023-04-15'
+update_day = CURRENT_TIMESTAMP
 WHERE
 goods_code = 'S987' AND store_code = 'EA01'
  
